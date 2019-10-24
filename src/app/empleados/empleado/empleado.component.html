@@ -1,0 +1,17 @@
+<form #form="ngForm" autocomplete="off">
+  <div class="form-group">
+    <label>Nombre</label>
+    <input  name="Nombre" class="form-control"
+    #Nombre="ngModel" [(ngModel)]="empleadoService.formData.Nombre" required> <!--required valor de Angular-->
+    <!--Despues de ser tocado aparecen unos de otros valores Ng. -->
+    <div class="validation-error" *ngIf="Nombre.invalid && Nombre.touched">Campo requerido</div>
+  </div>
+  <div class="form-group">
+    <label>Descripcion</label>
+    <input name="Descripcion" class="form-control"
+    #Descripcion="ngModel" [(ngModel)]="empleadoService.formData.Descripcion">
+  </div>
+  <div class="form-group">
+    <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">Enviar</button>
+  </div>  
+</form>
