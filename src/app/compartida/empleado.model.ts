@@ -3,5 +3,5 @@ export class Empleado {
     Name: string;
     Descripcion: string;
 
-    /*Una clase puede o no tener metodos y una interface no lo tiene */
+    /*Una clase puede o no tener metodos y una interface(una estrutura) no lo tiene */
 }
